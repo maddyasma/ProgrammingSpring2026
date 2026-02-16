@@ -1,9 +1,9 @@
-const circleDiameter = 100;
-// let circleX = 200;
-// let circleY = 300;
+const rectWidth = 100;
+const rectHeight = 130;
+
 let startingX = 200;
 let startingY = 100;
-let myRectangles = [];
+let myRects = [];
 let startingId = 0;
 function setup () {
     rectMode(CENTER);
@@ -11,23 +11,23 @@ function setup () {
     background(0);
     for (let k = 0; k < 2; k++) {
         for (let i = 0; i < 4; i++) {
-            rect(startingX, startingY, circleDiameter, circleDiameter);
-            myRectangles.push({ x: startingX, y: startingY, id: startingId });
+            rect(startingX, startingY, rectWidth, rectHeight);
+            myRects.push({ x: startingX, y: startingY, id: startingId });
             startingX += 150;
             startingId++;
         }
-        startingY += 150;
+        startingY += 180;
         startingX = 200;
     }
     
-    console.log(myCircles);
+    console.log(myRects);
 }
 
 function mousePressed() {
-    for (let j = 0; j < myRectangles.length; j++) {
-        let distance = dist(mouseX, mouseY, myRectangles[j].x, myRectangles[j].y);
-        if (distance < circleDiameter / 2) {
-            console.log('card has been clicked', myRectangles[j].id);
+    for (let j = 0; j < myRects.length; j++) {
+        let distance = dist(mouseX, mouseY, myRects[j].x, myRects[j].y);
+        if (distance < rectWidth / 2) {
+            console.log('card has been clicked', myRects[j].id);
         }
     }
 }
