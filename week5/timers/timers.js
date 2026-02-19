@@ -21,13 +21,13 @@ function keyTyped() {
         return;
     }
     keyToNumber = map(keyToNumber, 1, 9, 1, 255);
-    console.log('key to number', keyToNumber);
+    console.log('converted number', keyToNumber);
     blockColor = keyToNumber;
-    console.log('key to number3', keyToNumber);
+
 }
 
 drawTimer = window.setInterval(() => {
-    if(blockY - 50 >= height) {
+    if(blockY - 50 <= height) {
        drawBlock(blockX, blockY, blockColor);
     blockY += distance; 
     } else {
