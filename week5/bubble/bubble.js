@@ -12,14 +12,9 @@ function setup(){
 }
 
 function draw(){
-  // use no loop to prevent the draw function from 
-  // looping infinitely
-  // (otherwise you'll run the entire loop below
-  // repeatedly for ever)
+  // use no loop to prevent the draw function from looping infinitely
   noLoop();
 
-  // to have it run 30 times, use "i < 31" in the second part
-  // it will automatically stop on loop 29
   for(let i = 1; i < 91; i++){
     bubble1.move();
     bubble1.show();
@@ -27,7 +22,6 @@ function draw(){
     bubble2.show();
     console.log(i);
   }
-
 }
 // class bubble
 class Bubble {
