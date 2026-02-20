@@ -16,14 +16,13 @@ function drawBlock(x, y, color){
 }
 
 function keyTyped() {
-    let keyToNumber = Number(key);
-    if (isNaN(keyToNumber)) {
-        return;
+    if (!isNaN(Number(key))) {
+        blockColor = [
+            random(255),
+            random(255),
+            random(255)
+        ];
     }
-    keyToNumber = map(keyToNumber, 1, 9, 1, 255);
-    console.log('converted number', keyToNumber);
-    blockColor = keyToNumber;
-
 }
 
 drawTimer = window.setInterval(() => {
