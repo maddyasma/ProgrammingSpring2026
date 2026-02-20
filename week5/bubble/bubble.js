@@ -12,7 +12,7 @@ function setup(){
 }
 
 function draw(){
-    
+
     bubble1.move();
     bubble1.show();
     bubble2.move();
@@ -32,7 +32,7 @@ class Bubble {
     }
 
     show (){
-        stroke(255);
+        stroke(random(255), random(255), random(255));
         strokeWeight(4);
         noFill();
         ellipse(this.x, this.y, 24, 24);
