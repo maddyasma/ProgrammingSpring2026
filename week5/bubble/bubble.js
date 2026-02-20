@@ -4,6 +4,7 @@ let bubble2;
 
 function setup(){
     createCanvas(500,500);
+    background(0);
     bubble1 = new Bubble(100, 100);
     bubble2 = new Bubble(300, 300);
     print(bubble1.x, bubble1.y);
@@ -11,7 +12,7 @@ function setup(){
 }
 
 function draw(){
-    background(0);
+    
     bubble1.move();
     bubble1.show();
     bubble2.move();
@@ -26,8 +27,8 @@ class Bubble {
         this.y = 150;
     }
     move(){
-        this.x = this.x + random(-5,5);
-        this.y = this.y + random(-5,5);
+        this.x = this.x + random(-10,10);
+        this.y = this.y + random(-10,10);
     }
 
     show (){
