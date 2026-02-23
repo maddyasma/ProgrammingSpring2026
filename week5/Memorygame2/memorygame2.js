@@ -2,6 +2,7 @@
 const DOWN = 'down';
 const UP = 'up';
 let bgImage;
+let gameFont;
 let startingX = 100;
 let startingY = 100; 
 let cards = [];
@@ -19,6 +20,7 @@ let cardback;
 
 function preload() {
     bgImage = loadImage('images/background.png');
+    gameFont = loadFont('Metamorphous-Regular.ttf');
     cardback = loadImage('images/cardback.png');
     cardfaceArray = [
         loadImage('images/card1.png'),
@@ -31,6 +33,7 @@ function preload() {
 
 function setup(){
     createCanvas(800,600);
+    textFont(gameFont);
     let selectedFaces = [];
     for (let z = 0; z < 5; z++){
         const randomIndex = floor(random(cardfaceArray.length));
@@ -56,7 +59,7 @@ function draw() {
     if (gameState.numMatched === gameState.totalPairs) {
         fill('yellow');
         textSize(60);
-        text('You win!', 300, 300);
+        text('Huzzah!', 350, 450);
         noLoop();
 }
 for (let k = 0; k < cards.length; k++) {
@@ -86,11 +89,9 @@ function mousePressed() {
             console.log('flipped', cards[k]);
             gameState.flippedCards.push(cards[k]);
         }
-    }
-    }
-    if (gameState.flippedCards.length === 2) {
+        if (gameState.flippedCards.length === 2) {
         gameState.attempts++;
-        if (gameState.flippedCards(0).cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
+        if (gameState.flippedCards[0].cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
             //mark cards as matched so they dont flip back down
             gameState.flippedCards[0].isMatch = true;
             gameState.flippedCards[1].isMatch = true;
@@ -103,7 +104,9 @@ function mousePressed() {
             const loopTimeout = window.setTimeout(() => {
                 loop();
                 window.clearTimeout(loopTimeout);
-            }, 2000)
+            }, 1000)
+         }
+        }
     }
 }
 
