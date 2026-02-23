@@ -1,56 +1,70 @@
+
+const DOWN = 'down';
+const UP = 'up';
+let startingX = 100;
+let startingY = 100; 
+const gameState =  {}
+let cards = [];
+
 function setup(){
     createCanvas(800,600);
     background(0);
-    let myCard = new Card();
-    myCard.show();
+    for (let j = 0; j < 2; j++) {
+      for (let i = 0; i < 5; i++) {
+        cards.push(new Card(startingX, startingY));
+        startingX +=120;
     
+    }  
+    startingY += 150;
+    startingX = 100;
+}
+}
+
+function mousePressed() {
+    for (let k = 0; k<cards.length; k++) {
+        if(cards[k].didHit(mouseX, mouseY)) {
+            console.log('flipped');
+        }
+}
 }
 
 class Card {
-    constructor(){
-        this.x = 100;
-        this.y = 100;
+    constructor (x,y) {
+        this.x = x;
+        this.y = y;
         this.width = 80;
         this.height = 100;
+        this.face = DOWN;
+        this.show();
     }
     show () {
-        fill('brown');
-        rect(this.x, this.y, this.width, this.height, 10);
+        if(this.face === DOWN){
+            fill('rgb(200, 0, 0)');
+            rect(this.x, this.y, this.width, this.height, 10);
+        }
+        else {
+            fill('#aaa');
+            rect(this.x, this.y, this.width, this.height, 10);
+        }
+    
+        
+    }
+    didHit (mouseX,mouseY){
+        if (mouseX >= this.x && mouseX <= this.x + this.width && 
+            mouseY >= this.y && mouseY <= this.y + this.height) {
+                this.flip();
+            return true;
+            }
+        else {
+            return false;
+            }
+    }
+    flip () {
+        if (this.face === DOWN) {
+            this.face = UP;
+        } else {
+            this.face = DOWN;
+        }
+        this.show();
     }
 }
-
-
-
-// const rectWidth = 100;
-// const rectHeight = 130;
-
-// let startingX = 200;
-// let startingY = 100;
-// let myRects = [];
-// let startingId = 0;
-// function setup () {
-//     rectMode(CENTER);
-//     createCanvas(1000, 1000);
-//     background(0);
-//     for (let k = 0; k < 3; k++) {
-//         for (let i = 0; i < 4; i++) {
-//             rect(startingX, startingY, rectWidth, rectHeight);
-//             myRects.push({ x: startingX, y: startingY, id: startingId });
-//             startingX += 150;
-//             startingId++;
-//         }
-//         startingY += 180;
-//         startingX = 200;
-//     }
-    
-//     console.log(myRects);
-// }
-
-// function mousePressed() {
-//     for (let j = 0; j < myRects.length; j++) {
-//         let distance = dist(mouseX, mouseY, myRects[j].x, myRects[j].y);
-//         if (distance < rectWidth / 2) {
-//             console.log('card has been clicked', myRects[j].id);
-//         }
-//     }
-// }
