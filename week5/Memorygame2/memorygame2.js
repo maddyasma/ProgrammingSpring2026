@@ -1,11 +1,12 @@
 
 const DOWN = 'down';
 const UP = 'up';
+let bgImage;
 let startingX = 100;
 let startingY = 100; 
 let cards = [];
 const gameState = {
-    totalPairs: 0,
+    totalPairs: 5,
     flippedCards: [],
     numMatched: 0,
     attempts: 0,
@@ -17,6 +18,7 @@ let cardfaceArray = [];
 let cardback;
 
 function preload() {
+    bgImage = loadImage('images/background.png');
     cardback = loadImage('images/cardback.png');
     cardfaceArray = [
         loadImage('images/card1.png'),
@@ -29,7 +31,6 @@ function preload() {
 
 function setup(){
     createCanvas(800,600);
-    background(0);
     let selectedFaces = [];
     for (let z = 0; z < 5; z++){
         const randomIndex = floor(random(cardfaceArray.length));
@@ -49,14 +50,61 @@ function setup(){
     startingX = 100;
 }
 }
+
+function draw() {
+    image(bgImage, 0, 0, width, height);
+    if (gameState.numMatched === gameState.totalPairs) {
+        fill('yellow');
+        textSize(60);
+        text('You win!', 300, 300);
+        noLoop();
+}
+for (let k = 0; k < cards.length; k++) {
+    if (!cards[k].isMatch) {
+        cards[k].face = DOWN;
+}
+cards[k].show();
+} 
+noLoop();
+gameState.flippedCards.length = 0;
+gameState.waiting = false;
+fill('rgb(252, 243, 217)');
+textSize(30);
+text('attempts: ' + gameState.attempts, 100, 500);
+text('matches: ' + gameState.numMatched, 100, 450);
+}
+
+
 function mousePressed() {
+    if (gameState.waiting) {
+        return;
+    }
     for (let k = 0; k < cards.length; k++) {
+        //first check flipped cards length, and then we can trigger the flip
         console.log('gameState', gameState);
         if(gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
             console.log('flipped', cards[k]);
             gameState.flippedCards.push(cards[k]);
         }
-}
+    }
+    }
+    if (gameState.flippedCards.length === 2) {
+        gameState.attempts++;
+        if (gameState.flippedCards(0).cardFaceImg === gameState.flippedCards[1].cardFaceImg) {
+            //mark cards as matched so they dont flip back down
+            gameState.flippedCards[0].isMatch = true;
+            gameState.flippedCards[1].isMatch = true;
+            //empty the flipped cards array
+            gameState.flippedCards.length = 0;
+            //increment the score
+            gameState.numMatched++;
+            loop();
+        } else {
+            const loopTimeout = window.setTimeout(() => {
+                loop();
+                window.clearTimeout(loopTimeout);
+            }, 2000)
+    }
 }
 
 class Card {
