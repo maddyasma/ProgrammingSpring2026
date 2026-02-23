@@ -4,7 +4,15 @@ const UP = 'up';
 let startingX = 100;
 let startingY = 100; 
 let cards = [];
-const gameState = {};
+const gameState = {
+    totalPairs: 0,
+    flippedCards: [],
+    numMatched: 0,
+    attempts: 0,
+    waiting: false,
+
+};
+
 let cardfaceArray = [];
 let cardback;
 
@@ -43,8 +51,10 @@ function setup(){
 }
 function mousePressed() {
     for (let k = 0; k < cards.length; k++) {
-        if(cards[k].didHit(mouseX, mouseY)) {
+        console.log('gameState', gameState);
+        if(gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
             console.log('flipped', cards[k]);
+            gameState.flippedCards.push(cards[k]);
         }
 }
 }
@@ -57,18 +67,19 @@ class Card {
         this.height = 100;
         this.face = DOWN;
         this.cardFaceImg = cardFaceImg;
+        this.isMatch = false;
         this.show();
     }
     show () {
-        if(this.face === DOWN){
-            fill('rgb(200, 0, 0)');
-            rect(this.x, this.y, this.width, this.height, 10);
-            image(cardback,this.x, this.y);
-        }
-        else {
+        if(this.face === UP || this.isMatch) {
             fill('#aaa');
             rect(this.x, this.y, this.width, this.height, 10);
             image(this.cardFaceImg,this.x, this.y);
+        }
+        else {
+            fill('rgb(200, 0, 0)');
+            rect(this.x, this.y, this.width, this.height, 10);
+            image(cardback,this.x, this.y);
         }
     }
     didHit (mouseX,mouseY){
