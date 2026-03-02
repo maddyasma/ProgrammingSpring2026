@@ -10,7 +10,7 @@ const spittingFact = true;
 
   return (
       <div>
-      <h1>Llama Facts</h1>
+      <h1>Llama Fact</h1>
       <p>
       {spittingFact ? llamaFacts[2] : llamaFacts[3]}
       </p>
