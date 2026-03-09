@@ -10,7 +10,7 @@ function App() {
       
     },
     {
-      name: "Smiley fossil",
+      name: "Smiley Fossil",
       colors: ["grey", "white"],
       texture: "smooth",  
       image: "/Rock2.png",
@@ -23,19 +23,19 @@ function App() {
       image: "/Rock3.png",
     },
     {
-      name: "Crinoid Rock #2",
+      name: "Crinoid Fossil #2",
       colors: ["grey", "white"],
       texture: "rough", 
       image: "/Rock4.png",
     },
     {
-      name: "Coral fossil",
+      name: "Coral Fossil",
       colors: ["grey", "white"],
       texture: "rough", 
       image: "/Rock5.png",
     },
     {
-      name: "Mystery fossil",
+      name: "Mystery Fossil",
       colors: ["grey", "black"],
       texture: "smooth",
       image: "/Rock6.png",
@@ -43,8 +43,7 @@ function App() {
   ]
   return (
   <>
-  <h1>My Cool Lake Michigan Fossil Collection</h1>
-  <p>Show fossils here</p>
+  <h1>My Lake Michigan Fossil Collection</h1>
   <table className="fossil-table">
     <thead>
       <tr>
@@ -64,6 +63,7 @@ function App() {
         texture={fossil.texture}  
         image={fossil.image} 
         odd={index % 2 === 1}
+        
         />
         )
       })}
