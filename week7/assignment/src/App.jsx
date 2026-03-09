@@ -1,67 +1,68 @@
 import "./App.css";
-import "./fossilRow";
+import FossilRow from "./fossilRow.jsx";
 function App() {
   const coolFossils = [
     {
       name: "Crinoid Fossil #1",
       colors: ["grey", "white"],
-      image: "/Rock1.png",
       texture: "rough",
+      image: "/Rock1.png",
+      
     },
     {
       name: "Smiley fossil",
       colors: ["grey", "white"],
-        image: "/Rock2.png",
-        texture: "smooth",
+      texture: "smooth",  
+      image: "/Rock2.png",
+        
     }, 
     {
       name: "Shell fossil",
       colors: ["grey", "white"],
+      texture: "smooth",
       image: "/Rock3.png",
-      texture: "smooth"
     },
     {
       name: "Crinoid Rock #2",
       colors: ["grey", "white"],
+      texture: "rough", 
       image: "/Rock4.png",
-      texture: "rough"
     },
     {
       name: "Coral fossil",
       colors: ["grey", "white"],
+      texture: "rough", 
       image: "/Rock5.png",
-      texture: "rough"
-
     },
     {
       name: "Mystery fossil",
       colors: ["grey", "black"],
-      image: "/Rock6.png",
       texture: "smooth",
+      image: "/Rock6.png",
     }
-
   ]
   return (
   <>
   <h1>My Cool Lake Michigan Fossil Collection</h1>
-  <p>Show fossils here
-  </p>
+  <p>Show fossils here</p>
   <table className="fossil-table">
     <thead>
       <tr>
         <th>Name</th>
         <th>Colors</th>
+        <th>Texture</th>
         <th>Image</th>
         </tr>
     </thead>
     <tbody>
-      {coolFossils.map((name, index) => {
+      {coolFossils.map((fossil) => {
         return (
-        <fossilRow 
-        key={name.image}
-        name={name.name} 
-        colors={name.colors} 
-        image={name.image} 
+        <FossilRow 
+        key={fossil.image}
+        name={fossil.name} 
+        colors={fossil.colors} 
+        texture={fossil.texture}  
+        image={fossil.image} 
         />
         )
       })}
@@ -70,5 +71,4 @@ function App() {
   </>
   )
 }
-
 export default App;
