@@ -6,39 +6,39 @@ function App() {
       name: "Crinoid Fossil #1",
       colors: ["grey", "white"],
       texture: "rough",
-      image: "/Rock1.png",
+      image: "./Rock1.png",
       
     },
     {
       name: "Smiley Fossil",
       colors: ["grey", "white"],
       texture: "smooth",  
-      image: "/Rock2.png",
+      image: "./Rock2.png",
         
     }, 
     {
       name: "Shell fossil",
       colors: ["grey", "white"],
       texture: "smooth",
-      image: "/Rock3.png",
+      image: "./Rock3.png",
     },
     {
       name: "Crinoid Fossil #2",
       colors: ["grey", "white"],
       texture: "rough", 
-      image: "/Rock4.png",
+      image: "./Rock4.png",
     },
     {
       name: "Coral Fossil",
       colors: ["grey", "white"],
       texture: "rough", 
-      image: "/Rock5.png",
+      image: "./Rock5.png",
     },
     {
       name: "Mystery Fossil",
       colors: ["grey", "black"],
       texture: "smooth",
-      image: "/Rock6.png",
+      image: "./Rock6.png",
     }
   ]
   return (
