@@ -1,0 +1,16 @@
+.fossil-table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.fossil-table thead, .fossil-table tr {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.fossil-table th, .fossil-table td {
+  border: 1px solid black;
+}
+.fossil-table img {
+  width: 200px;
+}
