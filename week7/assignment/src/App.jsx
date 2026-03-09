@@ -1,5 +1,5 @@
 import "./App.css";
-import FossilRow from "./fossilRow.jsx";
+import { FossilRow } from "./fossilRow.jsx";
 function App() {
   const coolFossils = [
     {
@@ -55,7 +55,7 @@ function App() {
         </tr>
     </thead>
     <tbody>
-      {coolFossils.map((fossil) => {
+      {coolFossils.map((fossil, index) => {
         return (
         <FossilRow 
         key={fossil.image}
@@ -63,6 +63,7 @@ function App() {
         colors={fossil.colors} 
         texture={fossil.texture}  
         image={fossil.image} 
+        odd={index % 2 === 1}
         />
         )
       })}
