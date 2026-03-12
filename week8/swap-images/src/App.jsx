@@ -5,15 +5,16 @@ import alpaca from './assets/alpaca.png';
 
 function App() {
   const [animal, setAnimal] = useState(llama);
-  const handleClick = () => {
-    setAnimal(alpaca);
-  }
+
 
   return (
     <div className="App">
-      <h1>Click the button to change animals</h1>
+      <h1>Choose ur fighter</h1>
       <img src={animal} alt="Animal" />
-      <button onClick={handleClick}>Click here</button>
+      <div>
+      <button onClick={() => setAnimal(llama)}>Show Llama</button>
+      <button onClick={() => setAnimal(alpaca)}>Show Alpaca</button>
+    </div>
     </div>
   );
 }
