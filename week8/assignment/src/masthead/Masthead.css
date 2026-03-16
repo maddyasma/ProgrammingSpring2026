@@ -3,4 +3,11 @@
     width: 100%;
     text-align: center;
     margin: 50px auto 20px;
+
+}
+.masthead h1 {
+    font-family: "Winky Rough", sans-serif;
+    font-size: 60px;
+    margin: 0;
+    color: #333;
 }
