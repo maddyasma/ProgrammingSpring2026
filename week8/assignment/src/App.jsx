@@ -49,7 +49,17 @@ function App() {
       image: "./Rock6.png",
       id: "6"
     }
+
   ]);
+
+function deleteCard() {
+  console.log("delete me");
+
+}
+function duplicateCard() {
+  console.log("duplicate me");
+}
+
   return (
     <div className="page">
      <Masthead />
@@ -58,7 +68,10 @@ function App() {
         {/*use ItemCard component in loop*/}
         {fossils.map((fossil) => {
           return (
-            <ItemCard key={fossil.id} {...fossil} />
+            <ItemCard key={fossil.id} 
+            deleteFn={deleteCard}
+            duplicateFn={duplicateCard}
+            {...fossil} />
           )
         })}
       </div>
