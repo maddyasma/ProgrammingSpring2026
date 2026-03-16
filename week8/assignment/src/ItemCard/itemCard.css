@@ -1,0 +1,39 @@
+.fossilCard {
+    width: 300px;
+    max-width: 250px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    height: 375px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    position: relative;
+
+}
+
+.fossilImage img {
+    max-width: 250px;
+    width: 100%;
+}
+.cardTitle {
+    font-size: 18px;
+}
+
+.white {
+    background-color: white;
+}
+.blue {
+    background-color: blue;
+}
+.black {
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
