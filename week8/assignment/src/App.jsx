@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Masthead from "./masthead/Masthead.jsx";
 import ItemCard from "./ItemCard/itemCard.jsx";
+import {nanoid} from "nanoid";
 import "./App.css";
 
 function App() {
@@ -52,26 +53,34 @@ function App() {
 
   ]);
 
-function deleteCard() {
-  console.log("delete me");
-
+function deleteCard(id) {
+  console.log("delete me", id);
+  const updatedArray = fossils.filter((fossil) => {
+    return fossil.id !== id;
+  });
+  setFossils(updatedArray);
 }
-function duplicateCard() {
-  console.log("duplicate me");
+function duplicateCard(id) {
+  console.log("duplicate me", id);
+
+  const matchingFossil = fossils.find((fossil) => {
+    return fossil.id === id;
+  });
+
+  const updatedFossil = { ...matchingFossil, id: nanoid() };
+
+  setFossils([...fossils, updatedFossil]);
 }
 
   return (
     <div className="page">
      <Masthead />
       <div className="collection">
-        {/*rock map goes here*/}
-        {/*use ItemCard component in loop*/}
         {fossils.map((fossil) => {
           return (
             <ItemCard key={fossil.id} 
             deleteFn={deleteCard}
-            duplicateFn={duplicateCard}
-            {...fossil} />
+            duplicateFn={duplicateCard}{...fossil} />
           )
         })}
       </div>

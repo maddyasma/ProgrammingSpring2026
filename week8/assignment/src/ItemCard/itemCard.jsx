@@ -9,7 +9,7 @@ export default function ItemCard({
     image, 
     id,
     duplicateFn,
-    deleteFn
+    deleteFn,
     }) {
  return (
     <div className="fossilCard">
@@ -17,17 +17,20 @@ export default function ItemCard({
     <img src={image} alt={name}/>
     </div>
     <div className="cardTitle">{name}</div>
-    <div className="actions"><a href="">
-        <img src={trash} alt="Delete" />
-        </a><a href="">
-        <img src={copy} alt="Duplicate" />
-        </a></div>
-    <div className="cardTexture">{texture}</div>
-    {colors.map((color) => {
-        return <div key={color}/> 
-    })} 
-    </div>
-   )   
+
+  <div className="actions">
+    <button onClick={() => deleteFn(id)}>
+      <img src={trash} alt="Delete fossil" />
+    </button>
+
+    <button onClick={() => duplicateFn(id)}>
+      <img src={copy} alt="Duplicate fossil" />
+    </button>
+  </div>
+
+  <div className="cardTexture">{texture}</div>
+</div>
+);
 }
 ItemCard.propTypes = {
     name: PropTypes.string,
