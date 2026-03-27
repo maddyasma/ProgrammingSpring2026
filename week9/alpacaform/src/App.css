@@ -17,3 +17,6 @@ select {
   padding: 5px;
   margin-left: 10px;
 }
+.error {
+  color: red;
+}

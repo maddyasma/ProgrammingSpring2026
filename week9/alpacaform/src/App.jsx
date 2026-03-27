@@ -1,7 +1,7 @@
 import './App.css';
 import { useForm } from 'react-hook-form';  
 function App() {
- const { register, handleSubmit } = useForm();
+ const { register, handleSubmit, formState: { errors } } = useForm();
  function handleMyForm(data) {
   console.log("this is the data",data);
  }
@@ -20,17 +20,20 @@ function App() {
             <div>
 
               <label htmlFor="firstName">First Name</label>
-            <input type="text" id="firstName" {...register("firstName")} />
+            <input type="text" id="firstName" {...register("firstName", { required: "First name is required" })} /> 
+            {errors.firstName && <p className="error">{errors.firstName.message}</p>}
             </div>
 
             <div>
             <label htmlFor="lastName">Last Name</label>
-            <input type="text" id="lastName" {...register("lastName")} />
+            <input type="text" id="lastName" {...register("lastName", { required: "Last name is required" })} />
+              {errors.lastName && <p className="error">{errors.lastName.message}</p>}
             </div>
 
             <div>
             <label htmlFor="streetAddress">Street Address</label>
-            <input type="text" id="streetAddress" {...register("streetAddress")} />
+            <input type="text" id="streetAddress" {...register("streetAddress", { required: "Address is required" })} />
+            {errors.streetAddress && <p className="error">{errors.streetAddress.message}</p>}
             </div>
         
             <div>
