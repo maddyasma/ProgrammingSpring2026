@@ -9,13 +9,13 @@ function App() {
   return (
     <div>
   <h1>
-      my form
+      Alpaca Fan Club Registration Form
       </h1>
       <div>
         <form onSubmit={handleSubmit(handleMyForm)}>
           <fieldset>
             <legend>
-              Personal Info
+              <h2>Personal Info</h2>
             </legend>
             <div>
 
@@ -46,11 +46,13 @@ function App() {
             <input type="text" id="country" {...register("country")} />
             </div>
             <div>
-              <p>
-                Favorite Alpaca Color<label>White<input type="radio" value="white" {...register("favColor")} /></label>
-                Favorite Alpaca Color<label>Brown<input type="radio" value="brown" {...register("favColor")} /></label>
-                Favorite Alpaca Color<label>Black<input type="radio" value="black" {...register("favColor")} /></label>
-              </p>
+              <h2>
+                Favorite Alpaca Color
+                </h2>
+                <label>White<input type="radio" value="white" {...register("favColor")} /></label>
+                <label>Brown<input type="radio" value="brown" {...register("favColor")} /></label>
+                <label>Black<input type="radio" value="black" {...register("favColor")} /></label>
+            
             </div>
           </fieldset>
           <button type="submit">Submit</button>
