@@ -1,0 +1,13 @@
+.masthead {
+    max-width: 1920px;
+    width: 100%;
+    text-align: left;
+    margin: 0px auto 20px;
+
+}
+.masthead h1 {
+    font-family: "Winky Rough", sans-serif;
+    font-size: 60px;
+    margin: 0;
+    color: #333;
+}

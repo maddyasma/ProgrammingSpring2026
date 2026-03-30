@@ -1,0 +1,64 @@
+
+.fossilCard {
+    width: 300px;
+    max-width: 250px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    height: 375px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    position: relative;
+    background-color: whitesmoke;
+
+}
+
+.fossilImage img {
+    max-width: 250px;
+    width: 100%;
+}
+.cardTitle {
+    font-size: 30px;
+    font-family: "Winky Rough", sans-serif;
+}
+.cardEra {
+    font-size: 20px;
+    font-family: "Winky Rough", sans-serif;
+}
+
+.white {
+    background-color: white;
+}
+.blue {
+    background-color: blue;
+}
+.black {
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.actions {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.actions button img {
+  width: 30px;
+  height: 50px;
+}
+.actions button {
+    display: block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 2px;
+    padding-top: 3px;
+ }
