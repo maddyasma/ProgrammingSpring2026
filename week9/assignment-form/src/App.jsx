@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  { useForm } from "react-hook-form";
+import { NewFossilForm } from "./NewFossilForm/newFossilForm.jsx";
 import Masthead from "./Masthead/Masthead.jsx";
 import ItemCard from "./itemCard/itemCard.jsx";
 import {nanoid} from "nanoid";
@@ -14,8 +14,6 @@ import rock6 from "./assets/Rock6.png";
 import "./App.css";
 
 function App() {
-  const { register, handleSubmit,formState: { errors } } = useForm();
-
   const [fossils, setFossils] = useState(
 [
     {
@@ -106,26 +104,7 @@ function duplicateCard(id) {
         })}
         
       </div>
-      <div>
-          <form onSubmit={handleSubmit(addFossil)}>
-          <div className="formGroup">
-            <label>Fossil Name</label>
-            <input {...register("name", { required: true })} />
-            </div>
-            <div className="form-group">
-              <label>Image</label>
-              <input {...register("image", { required: true })} />
-              {errors.image && (<p className="error">Image is required</p>)}
-            </div>
-            <div className="form-group">
-            <p>Fossil Era</p>
-            <label><input value="Paleozoic Era" type="checkbox" {...register("era")} /> Paleozoic Era</label>
-            <label><input value="Mesozoic Era" type="checkbox" {...register("era")} /> Mesozoic Era</label>
-            <label><input value="Cenozoic Era" type="checkbox" {...register("era")} /> Cenozoic Era</label>
-            </div>
-            <button type="submit">Add Fossil</button>
-          </form>
-        </div>
+      <NewFossilForm addFossilFn={addFossil} />
     </div>
   )
 }

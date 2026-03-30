@@ -1,9 +1,11 @@
 .masthead {
     max-width: 1920px;
-    width: 100%;
     text-align: left;
     margin: 0px auto 20px;
 
+}
+.masthead img {
+    width: 100%;
 }
 .masthead h1 {
     font-family: "Winky Rough", sans-serif;
