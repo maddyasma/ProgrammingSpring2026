@@ -1,3 +1,4 @@
+import bothPic from '../assets/alpacavsllama.png'
 export function Home() {
     return (
         <>
@@ -7,6 +8,7 @@ export function Home() {
         navigation to learn more about each one and then you can decide which win:
         <strong>Llamas</strong> or <strong>Alpacas</strong>
         </p>
+        <img src={bothPic} alt="both" />
         </>
     )
 }
