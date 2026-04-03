@@ -1,8 +1,8 @@
 import {Link, Route, Routes} from 'react-router-dom'
 import {Home} from './views/Home.jsx'
 import './App.css'
-
-
+import {Llamas} from './views/Llamas.jsx'
+import {Alpacas} from './views/Alpacas.jsx'
 function App() {
 
   return (

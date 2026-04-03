@@ -1,4 +1,4 @@
-import alpacaPic from '../assets/alpaca.jpg'
+import alpacaPic from '../assets/alpaca.png'
 export function Alpacas() {
     return (
         <>

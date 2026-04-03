@@ -182,3 +182,9 @@
     border-right-color: var(--border);
   }
 }
+img {
+  width: 500px;
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+}

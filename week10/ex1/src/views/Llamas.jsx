@@ -1,4 +1,4 @@
-import llamaPic from '../assets/llama.jpg'
+import llamaPic from '../assets/llama.png'
 export function Llamas() {
     return (
       <>
