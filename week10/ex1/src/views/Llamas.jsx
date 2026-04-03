@@ -7,12 +7,12 @@ export function Llamas() {
       <p>Lamoids, or llamas (as they are more generally known as a group), consist of the vicuña (Vicugna vicugna, prev. Lama
   vicugna), guanaco (Lama guanicoe), Suri alpaca, and Huacaya alpaca (Vicugna pacos, prev. Lama guanicoe pacos), and the
   domestic llama (Lama glama). Guanacos and vicuñas live in the wild, while llamas and alpacas exist only as
-  domesticated
-  animals. Although early writers compared llamas to sheep, their similarity to the camel was soon recognized. They
+  domesticated animals. Although early writers compared llamas to sheep, their similarity to the camel was soon recognized. They
   were included in the genus Camelus along with alpaca in the Systema Naturae (1758) of Carl Linnaeus. They were,
   however, separated by Georges Cuvier in 1800 under the name of lama along with the guanaco. DNA analysis has
   confirmed that the guanaco is the wild ancestor of the llama, while the vicuña is the wild ancestor of the alpaca; the
-  latter two were placed in the genus Vicugna.</p>
+  latter two were placed in the genus Vicugna.
+      </p>
 
       <p>
   The genera Lama and Vicugna are, with the two species of true camels, the sole existing representatives of a very
