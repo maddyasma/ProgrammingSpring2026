@@ -4,7 +4,7 @@ export function AlbumRow({name, genre, song, image, odd}) {
     <tr className={odd && "odd"}>
         <td>{name}</td>
         <td>{genre}</td>
-        <td>{song}</td>  
+        <td>{date}</td>  
         <td><img src={image} alt={name} /></td>
     </tr>
     )

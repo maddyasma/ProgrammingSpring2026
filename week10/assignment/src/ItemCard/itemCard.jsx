@@ -1,24 +1,27 @@
 import PropTypes from "prop-types";
 import "./itemCard.css";
+import { Link } from "react-router-dom";
 import trash from "../assets/icons/trash.svg";
 import copy from "../assets/icons/copy.svg"; 
 export default function ItemCard({
-    name, 
-    genre,
-    song,
-    image, 
-    id,
-    duplicateFn,
-    deleteFn,
-    }) {
+   title,
+   genre,
+   image,
+   cover,
+   releaseDate,
+   id,
+   duplicateFn,
+   deleteFn,
+   }) {
  return (
-    <div className="albumCard">
-    <div className="albumImage"> 
-    <img src={image} alt={name}/>
+   <div className="albumCard">
+   <div className="albumImage"> 
+   <img src={image || cover} alt={title}/>
     </div>
-    <div className="cardTitle">{name}</div>
+    <div className="cardTitle"><Link to={`${id}`}>{title}</Link>
+    </div>
     <div className="cardGenre">{genre}</div>
-    <div className="cardSong">{song}</div>
+    <div className="cardDate">{releaseDate}</div>
 
   <div className="actions">
     <button onClick={() => deleteFn(id)}>
@@ -33,9 +36,9 @@ export default function ItemCard({
   );
 }
 ItemCard.propTypes = {
-    name: PropTypes.string,
+    title: PropTypes.string,
     genre: PropTypes.string,
-    song: PropTypes.string,
+    releaseDate: PropTypes.string,
     image: PropTypes.string,
     id: PropTypes.string,
     duplicateFn: PropTypes.func,
