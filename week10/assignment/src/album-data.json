@@ -1,0 +1,114 @@
+{
+  "albums": [
+    {
+      "id": 1,
+      "slug": "taylor-swift",
+      "title": "Taylor Swift",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_TaylorSwift.png",
+      "genre": "Country",
+      "releaseDate": "2006-10-24"
+      },
+      {
+      "id": 2,
+      "slug": "fearless",
+      "title": "Fearless",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_Fearless.png",
+      "genre": "Country",
+      "releaseDate": "2008-11-11"
+      },
+      {
+      "id": 3,
+      "slug": "speak-now",
+      "title": "Speak Now",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_SpeakNow.png",
+      "genre": "Country",
+      "releaseDate": "2010-10-25"
+      },
+      {
+      "id": 4,
+      "slug": "red",
+      "title": "Red",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_Red.png",
+      "genre": "Country",
+      "releaseDate": "2012-10-26"
+      },
+      {
+      "id": 5,
+      "slug": "1989",
+      "title": "1989",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_1989.png",
+      "genre": "Pop",
+      "releaseDate": "2014-10-27"
+      },
+      {
+      "id": 6,
+      "slug": "reputation",
+      "title": "Reputation",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_Reputation.png",
+      "genre": "Pop",
+      "releaseDate": "2017-11-10"
+      },
+      {
+      "id": 7,
+      "slug": "Lover",
+      "title": "Lover",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_Lover.png",
+      "genre": "Pop",
+      "releaseDate": "2019-06-28"
+      },
+      {
+      "id": 8,
+      "slug": "folklore",
+      "title": "Folklore",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_Folklore.png",
+      "genre": "Pop",
+      "releaseDate": "2020-07-24"
+      },
+      {
+      "id": 9,
+      "slug": "evermore",
+      "title": "Evermore",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_Evermore.png",
+      "genre": "Pop",
+      "releaseDate": "2020-12-11"
+      },
+      {
+      "id": 10,
+      "slug": "midnights",
+      "title": "Midnights",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_Midnights.png",
+      "genre": "Pop",
+      "releaseDate": "2022-10-21"
+      },
+      {
+      "id": 11,
+      "slug": "ttpd",
+      "title": "The Tortured Poet's Department",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_TheTorturedPoetsDepartment.png",
+      "genre": "Pop",
+      "releaseDate": "2024-04-19"
+      },
+      {
+      "id": 12,
+      "slug": "lifeofashowgirl",
+      "title": "Life of a Showgirl",
+      "artist": "Taylor Swift",
+      "cover": "./TaylorSwift_TheLifeofaShowgirl.png",
+      "genre": "Pop",
+      "releaseDate": "2025-10-31"
+      }
+
+    ]
+}
+    

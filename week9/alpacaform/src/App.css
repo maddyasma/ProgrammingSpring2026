@@ -1,0 +1,22 @@
+input [type="text" ] {
+  display: block;
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+  line-height:2.5;
+}
+h2 {
+  line-height: .5;
+}
+
+input {
+  padding: 5px;
+  margin-left: 10px;
+}
+select {
+  padding: 5px;
+  margin-left: 10px;
+}
+.error {
+  color: red;
+}

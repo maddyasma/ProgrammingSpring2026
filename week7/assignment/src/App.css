@@ -1,0 +1,33 @@
+.fossil-table {
+  width: 80%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-left: 10%;
+  padding-bottom: 20%;
+  margin-left: 10%;
+  background-color: rgb(253, 239, 215);
+}
+.fossil-table thead, .fossil-table tr {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.fossil-table th, .fossil-table td {
+  border: 1px solid rgb(64, 110, 102);
+}
+.fossil-table img {
+  width: 200px;
+}
+h1 {
+  text-align: center;
+  color: rgb(64, 110, 102);
+  font-size: 65px;
+}
+body {
+  font-family: 'Winky Rough';
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 20px;
+}

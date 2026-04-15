@@ -1,0 +1,12 @@
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+body {
+    background-color: #bfceca;
+}
